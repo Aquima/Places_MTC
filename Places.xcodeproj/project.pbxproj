@@ -19,6 +19,12 @@
 		27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */; };
 		27FA3E7B207C2B3700C1A14A /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E7A207C2B3700C1A14A /* SplashModel.swift */; };
 		27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E7A207C2B3700C1A14A /* SplashModel.swift */; };
+		27FA3E7E207C33C100C1A14A /* Trajan Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E7D207C33C100C1A14A /* Trajan Pro Regular.ttf */; };
+		27FA3E7F207C33C100C1A14A /* Trajan Pro Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E7D207C33C100C1A14A /* Trajan Pro Regular.ttf */; };
+		27FA3E81207C342D00C1A14A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E80207C342D00C1A14A /* Extensions.swift */; };
+		27FA3E82207C342D00C1A14A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E80207C342D00C1A14A /* Extensions.swift */; };
+		27FA3E84207C344600C1A14A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E83207C344600C1A14A /* Styles.swift */; };
+		27FA3E85207C344600C1A14A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E83207C344600C1A14A /* Styles.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,6 +51,9 @@
 		27FA3E73207C2A3800C1A14A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
 		27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
 		27FA3E7A207C2B3700C1A14A /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
+		27FA3E7D207C33C100C1A14A /* Trajan Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trajan Pro Regular.ttf"; sourceTree = "<group>"; };
+		27FA3E80207C342D00C1A14A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		27FA3E83207C344600C1A14A /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +155,7 @@
 		27FA3E6F207C290D00C1A14A /* Styles */ = {
 			isa = PBXGroup;
 			children = (
+				27FA3E83207C344600C1A14A /* Styles.swift */,
 			);
 			path = Styles;
 			sourceTree = "<group>";
@@ -153,6 +163,7 @@
 		27FA3E70207C291700C1A14A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				27FA3E80207C342D00C1A14A /* Extensions.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -160,6 +171,7 @@
 		27FA3E71207C292100C1A14A /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				27FA3E7D207C33C100C1A14A /* Trajan Pro Regular.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -262,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FA3E56207C26A600C1A14A /* LaunchScreen.storyboard in Resources */,
+				27FA3E7E207C33C100C1A14A /* Trajan Pro Regular.ttf in Resources */,
 				27FA3E53207C26A600C1A14A /* Assets.xcassets in Resources */,
 				27FA3E51207C26A100C1A14A /* Main.storyboard in Resources */,
 			);
@@ -271,6 +284,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FA3E7F207C33C100C1A14A /* Trajan Pro Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -282,6 +296,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				27FA3E74207C2A3800C1A14A /* SplashViewController.swift in Sources */,
+				27FA3E84207C344600C1A14A /* Styles.swift in Sources */,
+				27FA3E81207C342D00C1A14A /* Extensions.swift in Sources */,
 				27FA3E7B207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
@@ -293,8 +309,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FA3E82207C342D00C1A14A /* Extensions.swift in Sources */,
 				27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */,
+				27FA3E85207C344600C1A14A /* Styles.swift in Sources */,
 				27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */,
 				27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 			);
