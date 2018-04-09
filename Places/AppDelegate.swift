@@ -16,6 +16,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let view:SplashViewController = SplashViewController()
+        let model:SplashModel = SplashModel()
+        let presenter:SplashPresenter = SplashPresenter(view: view, model: model)
+        presenter.loadProtocols()
+        
+        let navigateController:UINavigationController = UINavigationController(rootViewController: view)
+        //self.window?.backgroundColor = .white
+        self.window?.rootViewController = navigateController
+        self.window?.makeKeyAndVisible()
         return true
     }
 

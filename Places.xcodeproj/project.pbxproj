@@ -13,6 +13,12 @@
 		27FA3E53207C26A600C1A14A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E52207C26A600C1A14A /* Assets.xcassets */; };
 		27FA3E56207C26A600C1A14A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E54207C26A600C1A14A /* LaunchScreen.storyboard */; };
 		27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E60207C26A700C1A14A /* PlacesTests.swift */; };
+		27FA3E74207C2A3800C1A14A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E73207C2A3800C1A14A /* SplashViewController.swift */; };
+		27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E73207C2A3800C1A14A /* SplashViewController.swift */; };
+		27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */; };
+		27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */; };
+		27FA3E7B207C2B3700C1A14A /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E7A207C2B3700C1A14A /* SplashModel.swift */; };
+		27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E7A207C2B3700C1A14A /* SplashModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +42,9 @@
 		27FA3E5C207C26A700C1A14A /* PlacesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlacesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA3E60207C26A700C1A14A /* PlacesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlacesTests.swift; sourceTree = "<group>"; };
 		27FA3E62207C26A700C1A14A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		27FA3E73207C2A3800C1A14A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
+		27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashPresenter.swift; sourceTree = "<group>"; };
+		27FA3E7A207C2B3700C1A14A /* SplashModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +86,10 @@
 		27FA3E4A207C26A100C1A14A /* Places */ = {
 			isa = PBXGroup;
 			children = (
+				27FA3E71207C292100C1A14A /* Fonts */,
+				27FA3E70207C291700C1A14A /* Extension */,
+				27FA3E6F207C290D00C1A14A /* Styles */,
+				27FA3E6B207C28FE00C1A14A /* MVP */,
 				27FA3E4B207C26A100C1A14A /* AppDelegate.swift */,
 				27FA3E4D207C26A100C1A14A /* ViewController.swift */,
 				27FA3E4F207C26A100C1A14A /* Main.storyboard */,
@@ -94,6 +107,77 @@
 				27FA3E62207C26A700C1A14A /* Info.plist */,
 			);
 			path = PlacesTests;
+			sourceTree = "<group>";
+		};
+		27FA3E6B207C28FE00C1A14A /* MVP */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E6C207C28FE00C1A14A /* Model */,
+				27FA3E6D207C28FE00C1A14A /* Presenter */,
+				27FA3E6E207C28FE00C1A14A /* View */,
+			);
+			path = MVP;
+			sourceTree = "<group>";
+		};
+		27FA3E6C207C28FE00C1A14A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E7A207C2B3700C1A14A /* SplashModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		27FA3E6D207C28FE00C1A14A /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E76207C2A7200C1A14A /* Splash */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		27FA3E6E207C28FE00C1A14A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E72207C29DD00C1A14A /* Splash */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		27FA3E6F207C290D00C1A14A /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		27FA3E70207C291700C1A14A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		27FA3E71207C292100C1A14A /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		27FA3E72207C29DD00C1A14A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E73207C2A3800C1A14A /* SplashViewController.swift */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		27FA3E76207C2A7200C1A14A /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */,
+			);
+			path = Splash;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,8 +281,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FA3E74207C2A3800C1A14A /* SplashViewController.swift in Sources */,
+				27FA3E7B207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
+				27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,7 +293,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */,
+				27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */,
+				27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,7 +381,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -345,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -360,6 +450,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Places/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -377,6 +468,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = Places/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
