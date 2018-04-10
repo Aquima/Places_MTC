@@ -25,6 +25,8 @@
 		27FA3E82207C342D00C1A14A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E80207C342D00C1A14A /* Extensions.swift */; };
 		27FA3E84207C344600C1A14A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E83207C344600C1A14A /* Styles.swift */; };
 		27FA3E85207C344600C1A14A /* Styles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E83207C344600C1A14A /* Styles.swift */; };
+		27FA3E88207C39A800C1A14A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E87207C39A800C1A14A /* LogInViewController.swift */; };
+		27FA3E89207C39A800C1A14A /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E87207C39A800C1A14A /* LogInViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,7 @@
 		27FA3E7D207C33C100C1A14A /* Trajan Pro Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Trajan Pro Regular.ttf"; sourceTree = "<group>"; };
 		27FA3E80207C342D00C1A14A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		27FA3E83207C344600C1A14A /* Styles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Styles.swift; sourceTree = "<group>"; };
+		27FA3E87207C39A800C1A14A /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +150,7 @@
 		27FA3E6E207C28FE00C1A14A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				27FA3E86207C393A00C1A14A /* Authenticate */,
 				27FA3E72207C29DD00C1A14A /* Splash */,
 			);
 			path = View;
@@ -190,6 +194,14 @@
 				27FA3E77207C2AE900C1A14A /* SplashPresenter.swift */,
 			);
 			path = Splash;
+			sourceTree = "<group>";
+		};
+		27FA3E86207C393A00C1A14A /* Authenticate */ = {
+			isa = PBXGroup;
+			children = (
+				27FA3E87207C39A800C1A14A /* LogInViewController.swift */,
+			);
+			path = Authenticate;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +311,7 @@
 				27FA3E84207C344600C1A14A /* Styles.swift in Sources */,
 				27FA3E81207C342D00C1A14A /* Extensions.swift in Sources */,
 				27FA3E7B207C2B3700C1A14A /* SplashModel.swift in Sources */,
+				27FA3E88207C39A800C1A14A /* LogInViewController.swift in Sources */,
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
 				27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
@@ -312,6 +325,7 @@
 				27FA3E82207C342D00C1A14A /* Extensions.swift in Sources */,
 				27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */,
+				27FA3E89207C39A800C1A14A /* LogInViewController.swift in Sources */,
 				27FA3E85207C344600C1A14A /* Styles.swift in Sources */,
 				27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */,
 				27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */,

@@ -1,5 +1,5 @@
 //
-//  SplashViewController.swift
+//  LogInViewController.swift
 //  Places
 //
 //  Created by NARA on 4/9/18.
@@ -7,15 +7,12 @@
 //
 
 import UIKit
-protocol SplashViewControllerDelegate {
-    func goToLogIn()
-}
-class SplashViewController: UIViewController {
-    var delegate:SplashViewControllerDelegate?
+
+class LogInViewController: UIViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
-        self.delegate?.goToLogIn()
+        view.backgroundColor = .orange
         // Do any additional setup after loading the view.
     }
 
