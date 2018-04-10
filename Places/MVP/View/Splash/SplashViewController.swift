@@ -14,7 +14,11 @@ class SplashViewController: UIViewController {
     var delegate:SplashViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        view.backgroundColor = .white
+        let img:UIImageView = UIImageView()
+        img.image = #imageLiteral(resourceName: "logo")
+        img.frame = CGRect(x: (self.view.frame.size.width - 100)/2, y:  (self.view.frame.size.height - 100)/2, width: 100, height: 100)
+        self.view.addSubview(img)
         self.delegate?.goToLogIn()
         // Do any additional setup after loading the view.
     }

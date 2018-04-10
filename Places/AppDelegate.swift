@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         presenter.loadProtocols()
         
         let navigateController:UINavigationController = UINavigationController(rootViewController: view)
+        navigateController.isNavigationBarHidden = true
         //self.window?.backgroundColor = .white
         self.window?.rootViewController = navigateController
         self.window?.makeKeyAndVisible()

@@ -23,6 +23,6 @@ class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate {
     }
     // MARK: - SplashViewcontrollerDelegate
     func goToLogIn() {
-        
+        self.model.loadLogin(view: view)
     }
 }
