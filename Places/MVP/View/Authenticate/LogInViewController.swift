@@ -8,14 +8,61 @@
 
 import UIKit
 
-class LogInViewController: UIViewController {
+class LogInViewController: UIViewController,UITextFieldDelegate {
 
+    var listInputText:Array = [InputTextField]()
+    var inputEmailText:InputTextField = InputTextField()
+    var inpuPasswordText:InputTextField = InputTextField()
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .orange
+        view.backgroundColor = .white
         // Do any additional setup after loading the view.
+        self.drawBody()
     }
-
+    func drawBody(){
+     //   186 117
+        // img logo
+        let img:UIImageView = UIImageView()
+        img.image = #imageLiteral(resourceName: "logMtc")
+        img.frame = CGRect(x: (self.view.frame.size.width - 186)/2, y:  32, width: 186, height: 117)
+        self.view.addSubview(img)
+        
+        inputEmailText.tintColor = .orange
+        inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 180, width: 240 , height: 25)
+        inputEmailText.textAlignment = .left
+        inputEmailText.withPlaceHolderGray(placeHolder: "Correo electronico", valuePro: 1, view: self.view)
+        inputEmailText.keyboardType = .emailAddress
+        inputEmailText.delegate = self
+        inputEmailText.inputType = .email
+        inputEmailText.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        listInputText.append(inputEmailText)
+        
+        inpuPasswordText.tintColor = .orange
+        inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 232, width: 240 , height: 25)
+        inpuPasswordText.textAlignment = .left
+        inpuPasswordText.withPlaceHolderGray(placeHolder: "Constraseña", valuePro: 1, view: self.view)
+        inpuPasswordText.keyboardType = .default
+        inpuPasswordText.delegate = self
+        inpuPasswordText.isSecureTextEntry = true
+        inpuPasswordText.inputType = .password
+        inpuPasswordText.addTarget(self, action: #selector(self.textFieldDidChange(_:)), for: .editingChanged)
+        listInputText.append(inpuPasswordText)
+        
+        let btnEnter:UIButton = UIButton()
+        btnEnter.frame = CGRect(x:(self.view.frame.size.width - 233)/2, y: 281, width: 233, height: 40.0)
+        btnEnter.layer.cornerRadius = 3
+        btnEnter.layer.masksToBounds = true
+        btnEnter.backgroundColor = UIColor.init(hexString: Styles.color.red)
+        btnEnter.titleLabel?.font =  UIFont(name: Styles.fonts.trajan, size: 14.5)
+        btnEnter.setTitle("Ingresar", for: .normal)
+        btnEnter.setTitleColor(UIColor.white, for: .normal)
+      //  btnEnter.addTarget(self, action: #selector(self.goToHome(sender:)), for: .touchUpInside)
+        self.view.addSubview(btnEnter)
+        
+    }
+    @IBAction func textFieldDidChange(_ texfield:InputTextField){
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

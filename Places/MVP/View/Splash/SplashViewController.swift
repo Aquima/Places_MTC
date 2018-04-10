@@ -14,6 +14,13 @@ class SplashViewController: UIViewController {
     var delegate:SplashViewControllerDelegate?
     override func viewDidLoad() {
         super.viewDidLoad()
+        for family in UIFont.familyNames {
+            print("\(family)")
+            
+            for name in UIFont.fontNames(forFamilyName: family) {
+                print("   \(name)")
+            }
+        }
         view.backgroundColor = .white
         let img:UIImageView = UIImageView()
         img.image = #imageLiteral(resourceName: "logo")

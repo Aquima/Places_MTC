@@ -9,5 +9,13 @@
 import UIKit
 
 class Styles: NSObject {
-
+    struct color {
+        static let gray = "8b8b94"
+        static let black = "555557"
+        static let red = "d7110e"
+    }
+    struct fonts {
+        static let trajan = "TrajanPro-Regular"
+        static let regular = "HelveticaNeue"
+    }
 }
