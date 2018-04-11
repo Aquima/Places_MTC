@@ -9,7 +9,7 @@
 import UIKit
 
 class LogInViewController: UIViewController,UITextFieldDelegate {
-
+    static let tableName = "LogIn"
     var listInputText:Array = [InputTextField]()
     var inputEmailText:InputTextField = InputTextField()
     var inpuPasswordText:InputTextField = InputTextField()
@@ -30,7 +30,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         inputEmailText.tintColor = .orange
         inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 180, width: 240 , height: 25)
         inputEmailText.textAlignment = .left
-        inputEmailText.withPlaceHolderGray(placeHolder: "Correo electronico", valuePro: 1, view: self.view)
+        inputEmailText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderEmail.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inputEmailText.keyboardType = .emailAddress
         inputEmailText.delegate = self
         inputEmailText.inputType = .email
@@ -40,7 +40,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         inpuPasswordText.tintColor = .orange
         inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 232, width: 240 , height: 25)
         inpuPasswordText.textAlignment = .left
-        inpuPasswordText.withPlaceHolderGray(placeHolder: "Constraseña", valuePro: 1, view: self.view)
+        inpuPasswordText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderPassword.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inpuPasswordText.keyboardType = .default
         inpuPasswordText.delegate = self
         inpuPasswordText.isSecureTextEntry = true
@@ -54,7 +54,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         btnEnter.layer.masksToBounds = true
         btnEnter.backgroundColor = UIColor.init(hexString: Styles.color.red)
         btnEnter.titleLabel?.font =  UIFont(name: Styles.fonts.trajan, size: 14.5)
-        btnEnter.setTitle("Ingresar", for: .normal)
+        btnEnter.setTitle(Preferences.LogIn.BtnTitleEnter.localizedFromTable(tableName: LogInViewController.tableName), for: .normal)
         btnEnter.setTitleColor(UIColor.white, for: .normal)
       //  btnEnter.addTarget(self, action: #selector(self.goToHome(sender:)), for: .touchUpInside)
         self.view.addSubview(btnEnter)

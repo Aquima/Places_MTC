@@ -1,0 +1,10 @@
+/* 
+  LogIn.strings
+  Places
+
+  Created by NARA on 4/10/18.
+  Copyright © 2018 Ministerio de Transportes y Comunicaciones. All rights reserved.
+*/
+"PlaceHolderEmail" = "Correo Electronico";
+"PlaceHolderPassword" = "Contraseña";
+"BtnTitleEnter" = "Ingresar";
