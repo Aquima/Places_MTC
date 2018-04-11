@@ -30,9 +30,9 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         img.image = #imageLiteral(resourceName: "logMtc")
         img.frame = CGRect(x: (self.view.frame.size.width - 186)/2, y:  32, width: 186, height: 117)
         self.view.addSubview(img)
-        
+ 
         inputEmailText.tintColor = .orange
-        inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 180, width: 240 , height: 25)
+        inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 380, width: 240 , height: 25)
         inputEmailText.textAlignment = .left
         inputEmailText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderEmail.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inputEmailText.keyboardType = .emailAddress
@@ -42,7 +42,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         listInputText.append(inputEmailText)
         
         inpuPasswordText.tintColor = .orange
-        inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 232, width: 240 , height: 25)
+        inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 432, width: 240 , height: 25)
         inpuPasswordText.textAlignment = .left
         inpuPasswordText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderPassword.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inpuPasswordText.keyboardType = .default
@@ -53,7 +53,7 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         listInputText.append(inpuPasswordText)
         
         let btnEnter:UIButton = UIButton()
-        btnEnter.frame = CGRect(x:(self.view.frame.size.width - 233)/2, y: 281, width: 233, height: 40.0)
+        btnEnter.frame = CGRect(x:(self.view.frame.size.width - 233)/2, y: 481, width: 233, height: 40.0)
         btnEnter.layer.cornerRadius = 3
         btnEnter.layer.masksToBounds = true
         btnEnter.backgroundColor = UIColor.init(hexString: Styles.color.red)

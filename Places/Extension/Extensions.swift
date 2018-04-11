@@ -28,7 +28,9 @@ extension UIColor {
     }
 }
 extension String {
+
     func localizedFromTable(tableName:String) -> String{
         return Bundle.main.localizedString(forKey: self, value: "", table: tableName)
     }
 }
+
