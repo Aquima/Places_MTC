@@ -35,7 +35,13 @@ class SplashViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-
+    func showLogInView(){
+        let viewLogIn:LogInViewController = LogInViewController()
+        let model:AuthenticateModel = AuthenticateModel()
+        let presenter:LogInPresenter = LogInPresenter(view: viewLogIn, model: model)
+        presenter.loadProtocols()
+        self.navigationController?.pushViewController(viewLogIn, animated: false)
+    }
     /*
     // MARK: - Navigation
 

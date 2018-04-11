@@ -11,7 +11,8 @@ protocol SplashViewPresenter {
     init(view:SplashViewController,model:SplashModel)
     func loadProtocols()
 }
-class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate {
+class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate,SplashModelDelegate {
+
     unowned let view:SplashViewController
     var model:SplashModel!
     required init(view: SplashViewController, model: SplashModel) {
@@ -20,9 +21,14 @@ class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate {
     }
     func loadProtocols() {
         view.delegate = self
+        model.delegate = self
     }
     // MARK: - SplashViewcontrollerDelegate
     func goToLogIn() {
         self.model.loadLogin(view: view)
+    }
+    // MARK: - SplashModelDelegate
+    func showLogIn() {
+        self.view.showLogInView()
     }
 }

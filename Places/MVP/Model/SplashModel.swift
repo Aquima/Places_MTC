@@ -7,12 +7,14 @@
 //
 
 import UIKit
-
+protocol SplashModelDelegate {
+    func showLogIn()
+}
 class SplashModel: NSObject {
+    var delegate:SplashModelDelegate?
     func loadLogin(view:SplashViewController){
         DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            let viewLogIn:LogInViewController = LogInViewController()
-            view.navigationController?.pushViewController(viewLogIn, animated: false)
+            self.delegate?.showLogIn()
         }
     }
 }

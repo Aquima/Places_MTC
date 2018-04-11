@@ -7,9 +7,13 @@
 //
 
 import UIKit
-
+protocol LogInViewControllerDelegate {
+    func validateInput(input:InputTextField)
+    func validateInputs(inputs:[InputTextField])
+}
 class LogInViewController: UIViewController,UITextFieldDelegate {
     static let tableName = "LogIn"
+    var delegate:LogInViewControllerDelegate?
     var listInputText:Array = [InputTextField]()
     var inputEmailText:InputTextField = InputTextField()
     var inpuPasswordText:InputTextField = InputTextField()
@@ -56,16 +60,23 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
         btnEnter.titleLabel?.font =  UIFont(name: Styles.fonts.trajan, size: 14.5)
         btnEnter.setTitle(Preferences.LogIn.BtnTitleEnter.localizedFromTable(tableName: LogInViewController.tableName), for: .normal)
         btnEnter.setTitleColor(UIColor.white, for: .normal)
-      //  btnEnter.addTarget(self, action: #selector(self.goToHome(sender:)), for: .touchUpInside)
+        btnEnter.addTarget(self, action: #selector(self.validateInputs(sender:)), for: .touchUpInside)
         self.view.addSubview(btnEnter)
         
     }
+    @IBAction func validateInputs(sender:UIButton){
+        self.delegate?.validateInputs(inputs: listInputText)
+    }
     @IBAction func textFieldDidChange(_ texfield:InputTextField){
-        
+        print("\(texfield.text!)")
+        self.delegate?.validateInput(input: texfield)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    func goToHome(){
+        //cargar la vista de home
     }
     
 

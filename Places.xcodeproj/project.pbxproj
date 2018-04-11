@@ -35,6 +35,8 @@
 		27FD2BE1207D83DA007F6BE6 /* LogIn.strings in Resources */ = {isa = PBXBuildFile; fileRef = 27FD2BDF207D83DA007F6BE6 /* LogIn.strings */; };
 		27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD2BE2207D84DE007F6BE6 /* Preferences.swift */; };
 		27FD2BE4207D84DE007F6BE6 /* Preferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD2BE2207D84DE007F6BE6 /* Preferences.swift */; };
+		27FD2BE7207D8B71007F6BE6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD2BE6207D8B71007F6BE6 /* LogInPresenter.swift */; };
+		27FD2BE8207D8B71007F6BE6 /* LogInPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FD2BE6207D8B71007F6BE6 /* LogInPresenter.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,7 @@
 		27FA3E8D207C414E00C1A14A /* InputTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputTextField.swift; sourceTree = "<group>"; };
 		27FD2BDF207D83DA007F6BE6 /* LogIn.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = LogIn.strings; sourceTree = "<group>"; };
 		27FD2BE2207D84DE007F6BE6 /* Preferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Preferences.swift; sourceTree = "<group>"; };
+		27FD2BE6207D8B71007F6BE6 /* LogInPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInPresenter.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +159,7 @@
 		27FA3E6D207C28FE00C1A14A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				27FD2BE5207D8B4F007F6BE6 /* LogIn */,
 				27FA3E76207C2A7200C1A14A /* Splash */,
 			);
 			path = Presenter;
@@ -226,6 +230,14 @@
 				27FD2BE2207D84DE007F6BE6 /* Preferences.swift */,
 			);
 			path = Preferences;
+			sourceTree = "<group>";
+		};
+		27FD2BE5207D8B4F007F6BE6 /* LogIn */ = {
+			isa = PBXGroup;
+			children = (
+				27FD2BE6207D8B71007F6BE6 /* LogInPresenter.swift */,
+			);
+			path = LogIn;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,6 +353,7 @@
 				27FA3E88207C39A800C1A14A /* LogInViewController.swift in Sources */,
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */,
+				27FD2BE7207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E8B207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
 				27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
@@ -355,6 +368,7 @@
 				27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FD2BE4207D84DE007F6BE6 /* Preferences.swift in Sources */,
 				27FA3E8C207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
+				27FD2BE8207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */,
 				27FA3E89207C39A800C1A14A /* LogInViewController.swift in Sources */,
 				27FA3E85207C344600C1A14A /* Styles.swift in Sources */,
