@@ -14,6 +14,8 @@
 		2783EB3120802CA3007FD8AD /* ListDepartmentsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */; };
 		2783EB3420802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3320802D3E007FD8AD /* ListDepartmentPresenter.swift */; };
 		2783EB3520802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3320802D3E007FD8AD /* ListDepartmentPresenter.swift */; };
+		2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3620803231007FD8AD /* CollectionDepartments.swift */; };
+		2783EB3820803231007FD8AD /* CollectionDepartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3620803231007FD8AD /* CollectionDepartments.swift */; };
 		27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E4B207C26A100C1A14A /* AppDelegate.swift */; };
 		27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E4D207C26A100C1A14A /* ViewController.swift */; };
 		27FA3E51207C26A100C1A14A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E4F207C26A100C1A14A /* Main.storyboard */; };
@@ -66,6 +68,7 @@
 		2783EB2B20802AAC007FD8AD /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentsViewController.swift; sourceTree = "<group>"; };
 		2783EB3320802D3E007FD8AD /* ListDepartmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentPresenter.swift; sourceTree = "<group>"; };
+		2783EB3620803231007FD8AD /* CollectionDepartments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDepartments.swift; sourceTree = "<group>"; };
 		27FA3E48207C26A100C1A14A /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA3E4B207C26A100C1A14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FA3E4D207C26A100C1A14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */,
+				2783EB3620803231007FD8AD /* CollectionDepartments.swift */,
 			);
 			path = ListDepartments;
 			sourceTree = "<group>";
@@ -501,6 +505,7 @@
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */,
 				2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */,
+				2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */,
 				27FD2BE7207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E8B207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
@@ -523,6 +528,7 @@
 				27FA3E85207C344600C1A14A /* Styles.swift in Sources */,
 				27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */,
 				2783EB3520802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */,
+				2783EB3820803231007FD8AD /* CollectionDepartments.swift in Sources */,
 				27FA3E8F207C414E00C1A14A /* InputTextField.swift in Sources */,
 				27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 				2783EB2D20802AAC007FD8AD /* Department.swift in Sources */,

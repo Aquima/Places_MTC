@@ -12,9 +12,15 @@ protocol ListDepartmentsViewControllerDelegate {
 }
 class ListDepartmentsViewController: UIViewController {
     var delegate:ListDepartmentsViewControllerDelegate?
+    var departmentCollection:CollectionDepartments = CollectionDepartments()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        departmentCollection.frame =   CGRect(x: 0, y:0, width: self.view.frame.size.width , height:self.view.frame.size.height)
+        departmentCollection.drawBody()
+        self.view.addSubview(departmentCollection)
+        
         self.delegate?.getDepartments()
     }
 
@@ -27,6 +33,7 @@ class ListDepartmentsViewController: UIViewController {
         for department in departments {
             print(department.title)
         }
+        self.departmentCollection.reloadView(data: departments)
     }
 
     /*
