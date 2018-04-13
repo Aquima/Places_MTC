@@ -14,4 +14,7 @@ class Preferences: NSObject {
         static let PlaceHolderPassword = "PlaceHolderPassword"
         static let BtnTitleEnter = "BtnTitleEnter"
     }
+    struct WebUrl {
+        static let urlBase = "http://67.205.176.58"
+    }
 }

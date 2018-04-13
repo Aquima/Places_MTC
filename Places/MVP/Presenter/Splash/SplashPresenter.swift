@@ -13,6 +13,8 @@ protocol SplashViewPresenter {
 }
 class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate,SplashModelDelegate {
 
+    
+
     unowned let view:SplashViewController
     var model:SplashModel!
     required init(view: SplashViewController, model: SplashModel) {
@@ -23,12 +25,18 @@ class SplashPresenter: SplashViewPresenter,SplashViewControllerDelegate,SplashMo
         view.delegate = self
         model.delegate = self
     }
-    // MARK: - SplashViewcontrollerDelegate
+    // MARK: - View
+    func getVideo() {
+        self.model.getVideo()
+    }
     func goToLogIn() {
         self.model.loadLogin(view: view)
     }
-    // MARK: - SplashModelDelegate
+    // MARK: - Model
     func showLogIn() {
         self.view.showLogInView()
+    }
+    func completeVideoUrl(url: String) {
+        self.view.showVideo(url: url)
     }
 }

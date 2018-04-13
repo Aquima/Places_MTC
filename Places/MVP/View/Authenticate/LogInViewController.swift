@@ -77,6 +77,11 @@ class LogInViewController: UIViewController,UITextFieldDelegate {
     }
     func goToHome(){
         //cargar la vista de home
+        let model:ListDeparmentsModel = ListDeparmentsModel()
+        let view:ListDepartmentsViewController = ListDepartmentsViewController()
+        let presenter = ListDepartmentPresenter(view: view, model: model)
+        presenter.loadProtocols()
+        self.navigationController?.pushViewController(view, animated: true)
     }
     
 

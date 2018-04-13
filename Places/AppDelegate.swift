@@ -14,10 +14,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        IQKeyboardManager.sharedManager().enable = true
-        IQKeyboardManager.sharedManager().shouldResignOnTouchOutside = true
-        IQKeyboardManager.sharedManager().previousNextDisplayMode = .alwaysHide
-        IQKeyboardManager.sharedManager().enableAutoToolbar = true
+
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
+        IQKeyboardManager.shared.previousNextDisplayMode = .alwaysHide
+        IQKeyboardManager.shared.enableAutoToolbar = false
         
         let view:SplashViewController = SplashViewController()
         let model:SplashModel = SplashModel()
