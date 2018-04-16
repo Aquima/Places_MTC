@@ -8,6 +8,7 @@ target 'Places' do
     pod 'Alamofire'
     pod 'SDWebImage'
     pod 'SwiftyJSON'
+    pod 'CameraManager', '~> 4.0'
   # Pods for Places
 
   target 'PlacesTests' do
