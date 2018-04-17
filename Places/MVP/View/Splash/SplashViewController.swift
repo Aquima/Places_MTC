@@ -59,10 +59,11 @@ class SplashViewController: UIViewController {
         let videoUrl = URL(string: url)!
         self.player.url = videoUrl
         self.player.playbackLoops = false
-         // para manejar las llamados con gestos para pausar o reproducir
-        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGestureRecognizer(_:)))
-        tapGestureRecognizer.numberOfTapsRequired = 1
-        self.player.view.addGestureRecognizer(tapGestureRecognizer)
+        self.player.playFromBeginning()
+//         // para manejar las llamados con gestos para pausar o reproducir
+//        let tapGestureRecognizer: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(handleTapGestureRecognizer(_:)))
+//        tapGestureRecognizer.numberOfTapsRequired = 1
+//        self.player.view.addGestureRecognizer(tapGestureRecognizer)
     }
     func showLogInView(){
         let viewLogIn:LogInViewController = LogInViewController()

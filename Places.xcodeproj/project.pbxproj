@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		271210A9208573AD004B0C73 /* CognitiveModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210A8208573AD004B0C73 /* CognitiveModel.swift */; };
+		271210AC20857800004B0C73 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210AB20857800004B0C73 /* PlaceDetailViewController.swift */; };
+		271210AF20857838004B0C73 /* PlaceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210AE20857838004B0C73 /* PlaceDetailPresenter.swift */; };
+		271210B12085785B004B0C73 /* PlaceDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210B02085785B004B0C73 /* PlaceDetailModel.swift */; };
 		2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2820802A4F007FD8AD /* ListDeparmentsModel.swift */; };
 		2783EB2C20802AAC007FD8AD /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2B20802AAC007FD8AD /* Department.swift */; };
 		2783EB2D20802AAC007FD8AD /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2B20802AAC007FD8AD /* Department.swift */; };
@@ -64,6 +68,10 @@
 		0EDE37DE2AE71D86E15A305C /* Pods-Places.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Places.release.xcconfig"; path = "Pods/Target Support Files/Pods-Places/Pods-Places.release.xcconfig"; sourceTree = "<group>"; };
 		16BC74ADBE5C99AED98D0ED2 /* Pods-PlacesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PlacesTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PlacesTests/Pods-PlacesTests.release.xcconfig"; sourceTree = "<group>"; };
 		175AADA80D08428887EFA8E9 /* Pods_Places.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Places.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		271210A8208573AD004B0C73 /* CognitiveModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CognitiveModel.swift; sourceTree = "<group>"; };
+		271210AB20857800004B0C73 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
+		271210AE20857838004B0C73 /* PlaceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenter.swift; sourceTree = "<group>"; };
+		271210B02085785B004B0C73 /* PlaceDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailModel.swift; sourceTree = "<group>"; };
 		2783EB2820802A4F007FD8AD /* ListDeparmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDeparmentsModel.swift; sourceTree = "<group>"; };
 		2783EB2B20802AAC007FD8AD /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentsViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +128,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271210AA208577E0004B0C73 /* DetailPlace */ = {
+			isa = PBXGroup;
+			children = (
+				271210AB20857800004B0C73 /* PlaceDetailViewController.swift */,
+			);
+			path = DetailPlace;
+			sourceTree = "<group>";
+		};
+		271210AD2085781B004B0C73 /* PlaceDetail */ = {
+			isa = PBXGroup;
+			children = (
+				271210AE20857838004B0C73 /* PlaceDetailPresenter.swift */,
+			);
+			path = PlaceDetail;
+			sourceTree = "<group>";
+		};
 		2783EB2A20802A9E007FD8AD /* Entity */ = {
 			isa = PBXGroup;
 			children = (
@@ -209,6 +233,8 @@
 				27FA3E7A207C2B3700C1A14A /* SplashModel.swift */,
 				27FA3E8A207C3EE400C1A14A /* AuthenticateModel.swift */,
 				2783EB2820802A4F007FD8AD /* ListDeparmentsModel.swift */,
+				271210A8208573AD004B0C73 /* CognitiveModel.swift */,
+				271210B02085785B004B0C73 /* PlaceDetailModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -216,6 +242,7 @@
 		27FA3E6D207C28FE00C1A14A /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				271210AD2085781B004B0C73 /* PlaceDetail */,
 				2783EB3220802D1A007FD8AD /* ListDepartmentPresenter */,
 				27FD2BE5207D8B4F007F6BE6 /* LogIn */,
 				27FA3E76207C2A7200C1A14A /* Splash */,
@@ -226,6 +253,7 @@
 		27FA3E6E207C28FE00C1A14A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				271210AA208577E0004B0C73 /* DetailPlace */,
 				2783EB2E20802C88007FD8AD /* ListDepartments */,
 				27FA3E86207C393A00C1A14A /* Authenticate */,
 				27FA3E72207C29DD00C1A14A /* Splash */,
@@ -450,6 +478,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Places/Pods-Places-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/CameraManager/CameraManager.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
 				"${BUILT_PRODUCTS_DIR}/Player/Player.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
@@ -458,6 +487,7 @@
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CameraManager.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Player.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
@@ -494,7 +524,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2783EB3420802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */,
+				271210AF20857838004B0C73 /* PlaceDetailPresenter.swift in Sources */,
 				27FA3E8E207C414E00C1A14A /* InputTextField.swift in Sources */,
+				271210AC20857800004B0C73 /* PlaceDetailViewController.swift in Sources */,
 				27FA3E74207C2A3800C1A14A /* SplashViewController.swift in Sources */,
 				27FA3E84207C344600C1A14A /* Styles.swift in Sources */,
 				2783EB3020802CA3007FD8AD /* ListDepartmentsViewController.swift in Sources */,
@@ -505,10 +537,12 @@
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */,
 				2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */,
+				271210A9208573AD004B0C73 /* CognitiveModel.swift in Sources */,
 				2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */,
 				27FD2BE7207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E8B207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
+				271210B12085785B004B0C73 /* PlaceDetailModel.swift in Sources */,
 				27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

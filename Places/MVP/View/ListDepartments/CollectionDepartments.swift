@@ -9,7 +9,11 @@
 import UIKit
 import SDWebImage
 // 149 width 207 higth
+protocol CollectionDepartmentsDelegate {
+    func selectDepartment(department:Department)
+}
 class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate{
+    var delegate:CollectionDepartmentsDelegate?
     let cellId = "Cell"
     var collectionview: UICollectionView!
     var data:[Department] = [Department]()
@@ -27,6 +31,10 @@ class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionView
     
         return CGSize(width: 149, height: 205)
     }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        //con esto puedo ir al detalle
+        self.delegate?.selectDepartment(department: data[indexPath.row])
+    }
     func drawBody(){
           let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
@@ -35,7 +43,7 @@ class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionView
          let frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         collectionview = UICollectionView(frame: frame, collectionViewLayout: layout)
         collectionview.register(DepartmentCell.self, forCellWithReuseIdentifier: cellId)
-        collectionview.backgroundColor = UIColor.black
+        collectionview.backgroundColor = UIColor.white
         // collectionview.isPagingEnabled = true
         self.addSubview(collectionview)
     }

@@ -11,7 +11,7 @@ protocol ListDepartmentViewPresenter {
     init(view:ListDepartmentsViewController,model:ListDeparmentsModel)
     func loadProtocols()
 }
-class ListDepartmentPresenter: ListDepartmentViewPresenter,ListDeparmentsModelDelegate,ListDepartmentsViewControllerDelegate {
+class ListDepartmentPresenter: ListDepartmentViewPresenter,ListDeparmentsModelDelegate,ListDepartmentsViewControllerDelegate,CollectionDepartmentsDelegate {
 
     unowned let view:ListDepartmentsViewController
     var model:ListDeparmentsModel
@@ -22,13 +22,16 @@ class ListDepartmentPresenter: ListDepartmentViewPresenter,ListDeparmentsModelDe
     
     func loadProtocols() {
         self.view.delegate = self
+        self.view.departmentCollection.delegate = self
         self.model.delegate = self
     }
     //Vista
     func getDepartments() {
         self.model.getDepartments()
     }
-    
+    func selectDepartment(department: Department) {
+        self.view.showDetail(department:department)
+    }
     //Model
     func completesDepartments(departments:[Department]){
         self.view.reloadDepartments(departments:departments)

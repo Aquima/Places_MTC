@@ -16,5 +16,6 @@ class Preferences: NSObject {
     }
     struct WebUrl {
         static let urlBase = "http://67.205.176.58"
+        static let urlCognitiveApi = "https://brazilsouth.api.cognitive.microsoft.com/vision/v1.0"
     }
 }

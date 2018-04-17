@@ -16,7 +16,7 @@ class ListDepartmentsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.view.backgroundColor = .white
         departmentCollection.frame =   CGRect(x: 0, y:0, width: self.view.frame.size.width , height:self.view.frame.size.height)
         departmentCollection.drawBody()
         self.view.addSubview(departmentCollection)
@@ -35,7 +35,14 @@ class ListDepartmentsViewController: UIViewController {
         }
         self.departmentCollection.reloadView(data: departments)
     }
-
+    func showDetail(department:Department){
+        let model:PlaceDetailModel = PlaceDetailModel()
+        model.department = department
+        let view:PlaceDetailViewController = PlaceDetailViewController()
+        let presenter = PlaceDetailPresenter(view: view, model: model)
+        presenter.loadProtocols()
+        self.navigationController?.pushViewController(view, animated: true)
+    }
     /*
     // MARK: - Navigation
 
