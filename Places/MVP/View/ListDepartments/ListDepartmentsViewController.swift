@@ -10,7 +10,7 @@ import UIKit
 protocol ListDepartmentsViewControllerDelegate {
     func getDepartments()
 }
-class ListDepartmentsViewController: UIViewController {
+class ListDepartmentsViewController: BaseViewController {
     var delegate:ListDepartmentsViewControllerDelegate?
     var departmentCollection:CollectionDepartments = CollectionDepartments()
     override func viewDidLoad() {

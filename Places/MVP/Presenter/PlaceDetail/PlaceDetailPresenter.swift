@@ -27,6 +27,7 @@ class PlaceDetailPresenter: PlaceDetailViewPresenter,PlaceDetailModelDelegate,Pl
     // MARK - View
     func loadViewCompleted() {
         self.view.lblTitle.text = self.model.department.title
+        self.view.loadImage(url: Preferences.WebUrl.urlBase + self.model.department.imgUrl)
     }
    
     

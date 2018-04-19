@@ -20,6 +20,7 @@
 		2783EB3520802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3320802D3E007FD8AD /* ListDepartmentPresenter.swift */; };
 		2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3620803231007FD8AD /* CollectionDepartments.swift */; };
 		2783EB3820803231007FD8AD /* CollectionDepartments.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB3620803231007FD8AD /* CollectionDepartments.swift */; };
+		27A712212088186100C5CAC2 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A712202088186100C5CAC2 /* BaseViewController.swift */; };
 		27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E4B207C26A100C1A14A /* AppDelegate.swift */; };
 		27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27FA3E4D207C26A100C1A14A /* ViewController.swift */; };
 		27FA3E51207C26A100C1A14A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 27FA3E4F207C26A100C1A14A /* Main.storyboard */; };
@@ -77,6 +78,7 @@
 		2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentsViewController.swift; sourceTree = "<group>"; };
 		2783EB3320802D3E007FD8AD /* ListDepartmentPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentPresenter.swift; sourceTree = "<group>"; };
 		2783EB3620803231007FD8AD /* CollectionDepartments.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionDepartments.swift; sourceTree = "<group>"; };
+		27A712202088186100C5CAC2 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		27FA3E48207C26A100C1A14A /* Places.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Places.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27FA3E4B207C26A100C1A14A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		27FA3E4D207C26A100C1A14A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -257,6 +259,7 @@
 				2783EB2E20802C88007FD8AD /* ListDepartments */,
 				27FA3E86207C393A00C1A14A /* Authenticate */,
 				27FA3E72207C29DD00C1A14A /* Splash */,
+				27A712202088186100C5CAC2 /* BaseViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -536,6 +539,7 @@
 				27FA3E88207C39A800C1A14A /* LogInViewController.swift in Sources */,
 				27FA3E4E207C26A100C1A14A /* ViewController.swift in Sources */,
 				27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */,
+				27A712212088186100C5CAC2 /* BaseViewController.swift in Sources */,
 				2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */,
 				271210A9208573AD004B0C73 /* CognitiveModel.swift in Sources */,
 				2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */,
@@ -733,6 +737,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A3QCVC2H;
 				INFOPLIST_FILE = Places/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -752,6 +757,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 73A3QCVC2H;
 				INFOPLIST_FILE = Places/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (

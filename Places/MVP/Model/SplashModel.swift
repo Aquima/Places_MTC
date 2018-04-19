@@ -22,28 +22,29 @@ class SplashModel: NSObject {
 //        }
     }
     func getVideo(){
-        let headers = [
-            "content-type": "application/json"
-        ]
-        let method = "/getVideo.json"
-        Alamofire.request(Preferences.WebUrl.urlBase + method,headers:headers).responseJSON { (responseObject) -> Void in
-            
-            if responseObject.result.isSuccess {
-                let resJson = JSON(responseObject.result.value!)
-                if resJson["isValide"].bool ==  true {
-                    self.delegate?.completeVideoUrl(url: resJson["link"].string!)
-                }else{
-                    self.delegate?.showLogIn()
-                }
-                
-            }
-            if responseObject.result.isFailure {
-                let error : NSError = responseObject.result.error! as NSError
-                print("\(error.description)")
-                    self.delegate?.showLogIn()
-                
-            }
-        }
+        self.delegate?.showLogIn()
+//        let headers = [
+//            "content-type": "application/json"
+//        ]
+//        let method = "/getVideo.json"
+//        Alamofire.request(Preferences.WebUrl.urlBase + method,headers:headers).responseJSON { (responseObject) -> Void in
+//            
+//            if responseObject.result.isSuccess {
+//                let resJson = JSON(responseObject.result.value!)
+//                if resJson["isValide"].bool ==  true {
+//                    self.delegate?.completeVideoUrl(url: resJson["link"].string!)
+//                }else{       
+//                    self.delegate?.showLogIn()
+//                }
+//                
+//            }
+//            if responseObject.result.isFailure {
+//                let error : NSError = responseObject.result.error! as NSError
+//                print("\(error.description)")
+//                    self.delegate?.showLogIn()
+//                
+//            }
+//        }
 
     }
    

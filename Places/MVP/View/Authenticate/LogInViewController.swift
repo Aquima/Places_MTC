@@ -11,7 +11,7 @@ protocol LogInViewControllerDelegate {
     func validateInput(input:InputTextField)
     func validateInputs(inputs:[InputTextField])
 }
-class LogInViewController: UIViewController,UITextFieldDelegate {
+class LogInViewController: BaseViewController,UITextFieldDelegate {
     static let tableName = "LogIn"
     var delegate:LogInViewControllerDelegate?
     var listInputText:Array = [InputTextField]()
