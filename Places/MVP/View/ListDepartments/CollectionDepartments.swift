@@ -12,7 +12,7 @@ import SDWebImage
 protocol CollectionDepartmentsDelegate {
     func selectDepartment(department:Department)
 }
-class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate{
+class CollectionDepartments: BaseView,UICollectionViewDataSource, UICollectionViewDelegateFlowLayout,UICollectionViewDelegate{
     var delegate:CollectionDepartmentsDelegate?
     let cellId = "Cell"
     var collectionview: UICollectionView!
@@ -29,7 +29,7 @@ class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionView
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
     
-        return CGSize(width: 149, height: 205)
+        return CGSize(width: 149*valuePro, height: 205*valuePro)
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         //con esto puedo ir al detalle
@@ -38,7 +38,7 @@ class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionView
     func drawBody(){
           let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
             layout.scrollDirection = .vertical
-            layout.sectionInset = UIEdgeInsets(top: 6.5, left: 6, bottom: 0, right: 6)
+            layout.sectionInset = UIEdgeInsets(top: 6.5*valuePro, left: 6*valuePro, bottom: 0, right: 6*valuePro)
         
          let frame = CGRect(x: 0, y: 0, width: self.frame.size.width, height: self.frame.size.height)
         collectionview = UICollectionView(frame: frame, collectionViewLayout: layout)
@@ -54,22 +54,24 @@ class CollectionDepartments: UIView,UICollectionViewDataSource, UICollectionView
         collectionview.delegate = self
     }
 }
-class DepartmentCell:UICollectionViewCell{
+class DepartmentCell:BaseCollectionViewCell{
+ 
     var imgPLace:UIImageView = {
         let img = UIImageView()
-        img.frame = CGRect(x: 0, y: 0, width: 149, height: 205)
+        
         return img
     }()
     var shadowView:UIView = {
         let view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: 149, height: 205)
+        
+ 
         view.backgroundColor = UIColor.black.withAlphaComponent(0.5)
         return view
     }()
     var lblTitle:UILabel = {
         let lblLable = UILabel()
-        lblLable.frame = CGRect(x: 25, y: 92, width: 117, height: 31)
-        lblLable.font = UIFont.init(name: Styles.fonts.regular, size: 14)
+       
+    
         lblLable.numberOfLines = 2
         lblLable.lineBreakMode = .byWordWrapping
         lblLable.textColor = .white
@@ -77,15 +79,13 @@ class DepartmentCell:UICollectionViewCell{
     }()
     var lblLema:UILabel = {
         let lblLable = UILabel()
-        lblLable.frame = CGRect(x: 25, y: 157, width: 117, height: 12)
-        lblLable.font = UIFont.init(name: Styles.fonts.regular, size: 10)
+        
+
         lblLable.textColor = .white
         return lblLable
     }()
     var lblDate:UILabel = {
         let lblLable = UILabel()
-        lblLable.frame = CGRect(x: 45, y: 171, width: 68, height: 24)
-        lblLable.font = UIFont.init(name: Styles.fonts.regular, size: 9)
         lblLable.numberOfLines = 2
         lblLable.lineBreakMode = .byWordWrapping
         lblLable.textColor = .white
@@ -107,10 +107,19 @@ class DepartmentCell:UICollectionViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     func addViews(){
+        imgPLace.frame = CGRect(x: 0, y: 0, width: 149*valuePro, height: 205*valuePro)
+        shadowView.frame = CGRect(x: 0, y: 0, width: 149*valuePro, height: 205*valuePro)
+        lblTitle.frame = CGRect(x: 25*valuePro, y: 92*valuePro, width: 117*valuePro, height: 31*valuePro)
+        lblTitle.font = UIFont.init(name: Styles.fonts.regular, size: 14*valuePro)
+        lblLema.frame = CGRect(x: 25*valuePro, y: 157*valuePro, width: 117*valuePro, height: 12*valuePro)
+        lblLema.font = UIFont.init(name: Styles.fonts.regular, size: 10*valuePro)
+        lblDate.frame = CGRect(x: 45*valuePro, y: 171*valuePro, width: 68*valuePro, height: 24*valuePro)
+        lblDate.font = UIFont.init(name: Styles.fonts.regular, size: 9*valuePro)
         self.addSubview(imgPLace)
         self.addSubview(shadowView)
         self.addSubview(lblTitle)
         self.addSubview(lblLema)
         self.addSubview(lblDate)
+        
     }
 }

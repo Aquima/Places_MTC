@@ -28,11 +28,11 @@ class LogInViewController: BaseViewController,UITextFieldDelegate {
         // img logo
         let img:UIImageView = UIImageView()
         img.image = #imageLiteral(resourceName: "logMtc")
-        img.frame = CGRect(x: (self.view.frame.size.width - 186)/2, y:  32, width: 186, height: 117)
+        img.frame = CGRect(x: (self.view.frame.size.width - 186*valuePro)/2, y:  32*valuePro, width: 186*valuePro, height: 117*valuePro)
         self.view.addSubview(img)
  
         inputEmailText.tintColor = .orange
-        inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 380, width: 240 , height: 25)
+        inputEmailText.frame = CGRect(x: (self.view.frame.size.width - 240*valuePro)/2, y: 380*valuePro, width: 240*valuePro , height: 25*valuePro)
         inputEmailText.textAlignment = .left
         inputEmailText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderEmail.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inputEmailText.keyboardType = .emailAddress
@@ -42,7 +42,7 @@ class LogInViewController: BaseViewController,UITextFieldDelegate {
         listInputText.append(inputEmailText)
         
         inpuPasswordText.tintColor = .orange
-        inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240)/2, y: 432, width: 240 , height: 25)
+        inpuPasswordText.frame = CGRect(x: (self.view.frame.size.width - 240*valuePro)/2, y: 432*valuePro, width: 240*valuePro , height: 25*valuePro)
         inpuPasswordText.textAlignment = .left
         inpuPasswordText.withPlaceHolderGray(placeHolder: Preferences.LogIn.PlaceHolderPassword.localizedFromTable(tableName: LogInViewController.tableName), valuePro: 1, view: self.view)
         inpuPasswordText.keyboardType = .default
@@ -53,11 +53,11 @@ class LogInViewController: BaseViewController,UITextFieldDelegate {
         listInputText.append(inpuPasswordText)
         
         let btnEnter:UIButton = UIButton()
-        btnEnter.frame = CGRect(x:(self.view.frame.size.width - 233)/2, y: 481, width: 233, height: 40.0)
-        btnEnter.layer.cornerRadius = 3
+        btnEnter.frame = CGRect(x:(self.view.frame.size.width - 233*valuePro)/2, y: 481*valuePro, width: 233*valuePro, height: 40.0*valuePro)
+        btnEnter.layer.cornerRadius = 3*valuePro
         btnEnter.layer.masksToBounds = true
         btnEnter.backgroundColor = UIColor.init(hexString: Styles.color.red)
-        btnEnter.titleLabel?.font =  UIFont(name: Styles.fonts.trajan, size: 14.5)
+        btnEnter.titleLabel?.font =  UIFont(name: Styles.fonts.trajan, size: 14.5*valuePro)
         btnEnter.setTitle(Preferences.LogIn.BtnTitleEnter.localizedFromTable(tableName: LogInViewController.tableName), for: .normal)
         btnEnter.setTitleColor(UIColor.white, for: .normal)
         btnEnter.addTarget(self, action: #selector(self.validateInputs(sender:)), for: .touchUpInside)

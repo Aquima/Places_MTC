@@ -33,4 +33,34 @@ extension String {
         return Bundle.main.localizedString(forKey: self, value: "", table: tableName)
     }
 }
-
+extension NSNumber {
+    public static func getPropotionalValueDevice() -> NSNumber{
+        let screenSize: CGRect = UIScreen.main.bounds
+        let valueScreen:CGFloat = screenSize.size.height
+        let integer:NSInteger = Int(valueScreen)
+        switch integer {
+            
+        case 480:
+            return 0.845;//4S
+        case 568:
+            return 1;//5S
+        case 667:
+            return 1.174;//
+        case 736:
+            return 1.295;//6Plus
+        case 812:
+            return 1.174;//6Plus
+        case 1024:
+            return 1;//iPad
+        case 1112:
+            return 1.0859
+        case 1366:
+            return 1.334;//iPad Pro
+        case 1536:
+            return 1.5;
+        default:
+            return 1;//iPad
+            
+        }
+    }
+}

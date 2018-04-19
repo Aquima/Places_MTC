@@ -22,21 +22,22 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
     let locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = .white
         // Do any additional setup after loading the view.
         
         let btnBack = UIButton()
-        btnBack.frame = CGRect(x: 10, y: 20, width: 44, height: 44)
+        btnBack.frame = CGRect(x: 10*valuePro, y: 20*valuePro, width: 44*valuePro, height: 44*valuePro)
         self.view.addSubview(btnBack)
         btnBack.setImage(#imageLiteral(resourceName: "iconBack"), for: .normal)
     
         btnBack.addTarget(self, action: #selector(self.goToBack(sender:)), for: .touchUpInside)
         
-        lblTitle.frame = CGRect(x: 60, y: 20, width: 200, height: 44)
+        lblTitle.frame = CGRect(x: 60*valuePro, y: 20*valuePro, width: 200*valuePro, height: 44*valuePro)
         lblTitle.textColor = .black
         self.view.addSubview(lblTitle)
 
-        img.frame = CGRect(x: 20, y: 70, width: 100, height: 100)
+        img.frame = CGRect(x: 20*valuePro, y: 70*valuePro, width: 100*valuePro, height: 100*valuePro)
         img.layer.cornerRadius = img.frame.size.width/2
         img.backgroundColor = .blue
         img.layer.masksToBounds = true
@@ -49,7 +50,8 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         textView.backgroundColor = UIColor.clear
         textView.text = "Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, consecteur, en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de de Finnibus Bonorum et Malorum (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, Lorem ipsum dolor sit amet.., viene de una linea en la sección 1.10.32"
         textView.textColor = UIColor.gray
-        textView.frame = CGRect(x: (self.view.frame.width - 300)/2, y: 180, width:300, height: 250)
+        textView.frame = CGRect(x: (self.view.frame.width - 300*valuePro)/2, y: 180*valuePro, width:300*valuePro, height: 250*valuePro)
+        textView.font = UIFont(name: Styles.fonts.regular, size: 13*valuePro)
         self.view.addSubview(textView)
      
         //440
@@ -57,7 +59,7 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         locationManager.requestWhenInUseAuthorization()
         locationManager.startUpdatingLocation()
         
-        viewMap.frame =  CGRect(x: (self.view.frame.width - 300)/2, y: 440, width:300, height: self.view.frame.size.height - 450)
+        viewMap.frame =  CGRect(x: (self.view.frame.width - 300*valuePro)/2, y: 440*valuePro, width:300*valuePro, height: self.view.frame.size.height - 450*valuePro)
       //  viewMap.backgroundColor = .green
         self.view.addSubview(viewMap)
         let coordinate = CLLocationCoordinate2D(latitude: -12.4545, longitude: -74.2312)

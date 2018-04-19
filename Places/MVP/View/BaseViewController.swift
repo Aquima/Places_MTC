@@ -9,10 +9,11 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-    
+    var screenSize: CGRect! = nil
+    let valuePro:CGFloat  = CGFloat(truncating: NSNumber.getPropotionalValueDevice())
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        self.screenSize = view.frame
         // Do any additional setup after loading the view.
     }
 
