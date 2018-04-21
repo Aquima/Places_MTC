@@ -26,6 +26,8 @@ class PlaceDetailPresenter: PlaceDetailViewPresenter,PlaceDetailModelDelegate,Pl
     // MARK - Model
     func completesDetailDepartments(detail: DepartmentDetail) {
         self.model.department.detail = detail
+        self.view.textView.text = detail.detail
+       self.view.showCoordinate(detail: detail)
     }
     // MARK - View
     func loadViewCompleted() {

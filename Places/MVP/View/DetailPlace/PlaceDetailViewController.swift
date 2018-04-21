@@ -15,12 +15,14 @@ protocol PlaceDetailViewControllerDelegate {
     func loadViewCompleted()
     func getDetailForMap()
 }
-class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
+class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate,MKMapViewDelegate {
     var delegate:PlaceDetailViewControllerDelegate?
     var lblTitle:UILabel = UILabel()
     var img:UIImageView = UIImageView()
     let viewMap = MKMapView()
     let locationManager = CLLocationManager()
+    var textView = UITextView()
+    var shapeAnnotation:ShapeMap!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,12 +46,12 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         img.layer.masksToBounds = true
         self.view.addSubview(img)
         
-        let textView = UITextView()
+        
         textView.isEditable = false
         textView.isScrollEnabled = true
         //UIColor.black.withAlphaComponent(0.5)
         textView.backgroundColor = UIColor.clear
-        textView.text = "Al contrario del pensamiento popular, el texto de Lorem Ipsum no es simplemente texto aleatorio. Tiene sus raices en una pieza cl´sica de la literatura del Latin, que data del año 45 antes de Cristo, haciendo que este adquiera mas de 2000 años de antiguedad. Richard McClintock, un profesor de Latin de la Universidad de Hampden-Sydney en Virginia, encontró una de las palabras más oscuras de la lengua del latín, consecteur, en un pasaje de Lorem Ipsum, y al seguir leyendo distintos textos del latín, descubrió la fuente indudable. Lorem Ipsum viene de las secciones 1.10.32 y 1.10.33 de de Finnibus Bonorum et Malorum (Los Extremos del Bien y El Mal) por Cicero, escrito en el año 45 antes de Cristo. Este libro es un tratado de teoría de éticas, muy popular durante el Renacimiento. La primera linea del Lorem Ipsum, Lorem ipsum dolor sit amet.., viene de una linea en la sección 1.10.32"
+    
         textView.textColor = UIColor.gray
         textView.frame = CGRect(x: (self.view.frame.width - 300*valuePro)/2, y: 180*valuePro, width:300*valuePro, height: 250*valuePro)
         textView.font = UIFont(name: Styles.fonts.regular, size: 13*valuePro)
@@ -63,8 +65,7 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         viewMap.frame =  CGRect(x: (self.view.frame.width - 300*valuePro)/2, y: 440*valuePro, width:300*valuePro, height: self.view.frame.size.height - 450*valuePro)
       //  viewMap.backgroundColor = .green
         self.view.addSubview(viewMap)
-        let coordinate = CLLocationCoordinate2D(latitude: -12.4545, longitude: -74.2312)
-        viewMap.setCenter(coordinate, animated: true)
+   
         viewMap.showsCompass = true
         viewMap.showsScale = true
         viewMap.showsUserLocation = true
@@ -78,7 +79,7 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         btnShowDetail.setTitleColor(.white, for: .normal)
         btnShowDetail.addTarget(self, action: #selector(goToDetail(sender:)), for: .touchUpInside)
         viewMap.addSubview(btnShowDetail)
-
+        viewMap.delegate = self
         self.delegate?.loadViewCompleted()
       
     }
@@ -102,14 +103,25 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
     }
     // MARK - Delegate
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        print("\(locations[0].coordinate)")
-        let location = locations[0]
-        let center = location.coordinate
-        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
-        let region = MKCoordinateRegion(center: center, span: span)
-        viewMap.setRegion(region, animated: true)
+//        print("\(locations[0].coordinate)")
+//        let location = locations[0]
+//        let center = location.coordinate
+//        let span = MKCoordinateSpan(latitudeDelta: 0.05, longitudeDelta: 0.05)
+//        let region = MKCoordinateRegion(center: center, span: span)
+//        viewMap.setRegion(region, animated: true)
     }
-
+    func showCoordinate(detail:DepartmentDetail){
+        let coordinate = CLLocationCoordinate2D(latitude: detail.coordinate.lat, longitude: detail.coordinate.lng)
+        viewMap.setCenter(coordinate, animated: true)
+        shapeAnnotation = ShapeMap(coordinate: coordinate, title: "Puno", subtitle: "Lema")
+        //  shapeAnnotation.set
+        viewMap.addAnnotation(shapeAnnotation)
+    }
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
+        let pin:PinCustom = PinCustom(annotation: self.shapeAnnotation, reuseIdentifier: "Pincustom")
+        
+        return pin
+    }
     /*
     // MARK: - Navigation
 
