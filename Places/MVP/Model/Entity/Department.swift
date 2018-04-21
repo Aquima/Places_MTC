@@ -15,6 +15,7 @@ class Department: NSObject {
     var date:Date = Date()//dd/mm/yyyy
     var lema:String = ""
     var id:String = ""
+    var detail:DepartmentDetail!
     init(object:JSON){
         self.title = object["title"].string!
         self.imgUrl = object["imgUrl"].string!

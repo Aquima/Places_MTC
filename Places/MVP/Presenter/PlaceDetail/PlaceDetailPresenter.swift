@@ -24,10 +24,17 @@ class PlaceDetailPresenter: PlaceDetailViewPresenter,PlaceDetailModelDelegate,Pl
         self.model.delegate = self
     }
     // MARK - Model
+    func completesDetailDepartments(detail: DepartmentDetail) {
+        self.model.department.detail = detail
+    }
     // MARK - View
     func loadViewCompleted() {
         self.view.lblTitle.text = self.model.department.title
         self.view.loadImage(url: Preferences.WebUrl.urlBase + self.model.department.imgUrl)
+        self.model.getDetailDepartment(department: self.model.department)
+    }
+    func getDetailForMap() {
+        self.view.showDetailMap(detail: self.model.department.detail)
     }
    
     

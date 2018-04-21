@@ -11,6 +11,14 @@
 		271210AC20857800004B0C73 /* PlaceDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210AB20857800004B0C73 /* PlaceDetailViewController.swift */; };
 		271210AF20857838004B0C73 /* PlaceDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210AE20857838004B0C73 /* PlaceDetailPresenter.swift */; };
 		271210B12085785B004B0C73 /* PlaceDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 271210B02085785B004B0C73 /* PlaceDetailModel.swift */; };
+		2718462A208AA77600C257E0 /* DepartmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184629208AA77600C257E0 /* DepartmentDetail.swift */; };
+		2718462B208AA77600C257E0 /* DepartmentDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184629208AA77600C257E0 /* DepartmentDetail.swift */; };
+		2718462E208AAE9800C257E0 /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718462D208AAE9800C257E0 /* DetailMapViewController.swift */; };
+		2718462F208AAE9800C257E0 /* DetailMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2718462D208AAE9800C257E0 /* DetailMapViewController.swift */; };
+		27184631208AB46A00C257E0 /* ShapeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184630208AB46A00C257E0 /* ShapeMap.swift */; };
+		27184632208AB46A00C257E0 /* ShapeMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184630208AB46A00C257E0 /* ShapeMap.swift */; };
+		27184634208AB71B00C257E0 /* PinCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184633208AB71B00C257E0 /* PinCustom.swift */; };
+		27184635208AB71B00C257E0 /* PinCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27184633208AB71B00C257E0 /* PinCustom.swift */; };
 		2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2820802A4F007FD8AD /* ListDeparmentsModel.swift */; };
 		2783EB2C20802AAC007FD8AD /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2B20802AAC007FD8AD /* Department.swift */; };
 		2783EB2D20802AAC007FD8AD /* Department.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2783EB2B20802AAC007FD8AD /* Department.swift */; };
@@ -75,6 +83,10 @@
 		271210AB20857800004B0C73 /* PlaceDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailViewController.swift; sourceTree = "<group>"; };
 		271210AE20857838004B0C73 /* PlaceDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailPresenter.swift; sourceTree = "<group>"; };
 		271210B02085785B004B0C73 /* PlaceDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceDetailModel.swift; sourceTree = "<group>"; };
+		27184629208AA77600C257E0 /* DepartmentDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DepartmentDetail.swift; sourceTree = "<group>"; };
+		2718462D208AAE9800C257E0 /* DetailMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailMapViewController.swift; sourceTree = "<group>"; };
+		27184630208AB46A00C257E0 /* ShapeMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShapeMap.swift; sourceTree = "<group>"; };
+		27184633208AB71B00C257E0 /* PinCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinCustom.swift; sourceTree = "<group>"; };
 		2783EB2820802A4F007FD8AD /* ListDeparmentsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDeparmentsModel.swift; sourceTree = "<group>"; };
 		2783EB2B20802AAC007FD8AD /* Department.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Department.swift; sourceTree = "<group>"; };
 		2783EB2F20802CA3007FD8AD /* ListDepartmentsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListDepartmentsViewController.swift; sourceTree = "<group>"; };
@@ -150,10 +162,21 @@
 			path = PlaceDetail;
 			sourceTree = "<group>";
 		};
+		2718462C208AAE8200C257E0 /* DetailMap */ = {
+			isa = PBXGroup;
+			children = (
+				2718462D208AAE9800C257E0 /* DetailMapViewController.swift */,
+			);
+			path = DetailMap;
+			sourceTree = "<group>";
+		};
 		2783EB2A20802A9E007FD8AD /* Entity */ = {
 			isa = PBXGroup;
 			children = (
 				2783EB2B20802AAC007FD8AD /* Department.swift */,
+				27184629208AA77600C257E0 /* DepartmentDetail.swift */,
+				27184630208AB46A00C257E0 /* ShapeMap.swift */,
+				27184633208AB71B00C257E0 /* PinCustom.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -259,6 +282,7 @@
 		27FA3E6E207C28FE00C1A14A /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2718462C208AAE8200C257E0 /* DetailMap */,
 				271210AA208577E0004B0C73 /* DetailPlace */,
 				2783EB2E20802C88007FD8AD /* ListDepartments */,
 				27FA3E86207C393A00C1A14A /* Authenticate */,
@@ -533,6 +557,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2783EB3420802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */,
+				2718462A208AA77600C257E0 /* DepartmentDetail.swift in Sources */,
 				271210AF20857838004B0C73 /* PlaceDetailPresenter.swift in Sources */,
 				27FA3E8E207C414E00C1A14A /* InputTextField.swift in Sources */,
 				271210AC20857800004B0C73 /* PlaceDetailViewController.swift in Sources */,
@@ -547,12 +572,15 @@
 				27FD2BE3207D84DE007F6BE6 /* Preferences.swift in Sources */,
 				27A712212088186100C5CAC2 /* BaseViewController.swift in Sources */,
 				2783EB2920802A4F007FD8AD /* ListDeparmentsModel.swift in Sources */,
+				2718462E208AAE9800C257E0 /* DetailMapViewController.swift in Sources */,
 				271210A9208573AD004B0C73 /* CognitiveModel.swift in Sources */,
 				2783EB3720803231007FD8AD /* CollectionDepartments.swift in Sources */,
 				27A7122520881E4500C5CAC2 /* BaseCollectionViewCell.swift in Sources */,
 				27FD2BE7207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E8B207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
 				27A7122320881DF700C5CAC2 /* BaseView.swift in Sources */,
+				27184631208AB46A00C257E0 /* ShapeMap.swift in Sources */,
+				27184634208AB71B00C257E0 /* PinCustom.swift in Sources */,
 				27FA3E4C207C26A100C1A14A /* AppDelegate.swift in Sources */,
 				271210B12085785B004B0C73 /* PlaceDetailModel.swift in Sources */,
 				27FA3E78207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
@@ -567,14 +595,18 @@
 				27FA3E7C207C2B3700C1A14A /* SplashModel.swift in Sources */,
 				27FD2BE4207D84DE007F6BE6 /* Preferences.swift in Sources */,
 				27FA3E8C207C3EE400C1A14A /* AuthenticateModel.swift in Sources */,
+				27184635208AB71B00C257E0 /* PinCustom.swift in Sources */,
 				27FD2BE8207D8B71007F6BE6 /* LogInPresenter.swift in Sources */,
 				27FA3E61207C26A700C1A14A /* PlacesTests.swift in Sources */,
 				2783EB3120802CA3007FD8AD /* ListDepartmentsViewController.swift in Sources */,
 				27FA3E89207C39A800C1A14A /* LogInViewController.swift in Sources */,
+				2718462B208AA77600C257E0 /* DepartmentDetail.swift in Sources */,
 				27FA3E85207C344600C1A14A /* Styles.swift in Sources */,
 				27FA3E75207C2A3800C1A14A /* SplashViewController.swift in Sources */,
 				2783EB3520802D3E007FD8AD /* ListDepartmentPresenter.swift in Sources */,
 				2783EB3820803231007FD8AD /* CollectionDepartments.swift in Sources */,
+				2718462F208AAE9800C257E0 /* DetailMapViewController.swift in Sources */,
+				27184632208AB46A00C257E0 /* ShapeMap.swift in Sources */,
 				27FA3E8F207C414E00C1A14A /* InputTextField.swift in Sources */,
 				27FA3E79207C2AE900C1A14A /* SplashPresenter.swift in Sources */,
 				2783EB2D20802AAC007FD8AD /* Department.swift in Sources */,

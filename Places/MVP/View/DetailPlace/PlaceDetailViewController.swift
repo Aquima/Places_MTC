@@ -13,6 +13,7 @@ import CoreLocation
 
 protocol PlaceDetailViewControllerDelegate {
     func loadViewCompleted()
+    func getDetailForMap()
 }
 class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
     var delegate:PlaceDetailViewControllerDelegate?
@@ -67,9 +68,27 @@ class PlaceDetailViewController: BaseViewController,CLLocationManagerDelegate {
         viewMap.showsCompass = true
         viewMap.showsScale = true
         viewMap.showsUserLocation = true
+        
+        let btnShowDetail = UIButton()
+        btnShowDetail.frame = CGRect(x:self.viewMap.frame.size.width - 75*valuePro, y: 5*valuePro, width: 70*valuePro, height: 20*valuePro)
+        btnShowDetail.setTitle("Ver Mas", for: .normal)
+        btnShowDetail.layer.cornerRadius = 3*valuePro
+        btnShowDetail.layer.masksToBounds = true
+        btnShowDetail.backgroundColor = UIColor.red
+        btnShowDetail.setTitleColor(.white, for: .normal)
+        btnShowDetail.addTarget(self, action: #selector(goToDetail(sender:)), for: .touchUpInside)
+        viewMap.addSubview(btnShowDetail)
 
         self.delegate?.loadViewCompleted()
       
+    }
+    @IBAction func goToDetail(sender:UIButton){
+        self.delegate?.getDetailForMap()
+    }
+    func showDetailMap(detail:DepartmentDetail){
+        let view:DetailMapViewController = DetailMapViewController()
+        view.detail = detail
+        self.navigationController?.pushViewController(view, animated: true)
     }
     func loadImage(url:String){
         img.sd_setImage(with: URL(string: url), completed: nil)
