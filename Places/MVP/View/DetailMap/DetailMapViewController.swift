@@ -28,17 +28,41 @@ class DetailMapViewController: BaseViewController,MKMapViewDelegate {
         shapeAnnotation = ShapeMap(coordinate: coordinate, title: "Puno", subtitle: "Lema")
       //  shapeAnnotation.set
         viewMap.addAnnotation(shapeAnnotation)
+        self.drawShape(shape:detail.shape)
         
+        let btnGoBack = UIButton()
+        btnGoBack.frame = CGRect(x: 15*valuePro, y: 15*valuePro, width: 40*valuePro, height: 40*valuePro)
+        btnGoBack.setImage(#imageLiteral(resourceName: "iconBack"), for: .normal)
+        btnGoBack.addTarget(self, action: #selector(goBack(sender:)), for: .touchUpInside)
+        self.view.addSubview(btnGoBack)
     }
-    func drawShaper(shape:[Coordinate]){
+    @IBAction func goBack(sender:UIButton){
+        self.navigationController?.popViewController(animated: true)
+    }
+    func drawShape(shape:[Coordinate]){
+        var locations = [CLLocationCoordinate2D]()
         for coordinate in shape {
-           
+           let newCoordinate = CLLocationCoordinate2D(latitude: coordinate.lat, longitude: coordinate.lng)
+            locations.append(newCoordinate)
         }
+        let polygon = MKPolygon(coordinates: locations, count: locations.count)
+        viewMap.add(polygon)
     }
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView?{
         let pin:PinCustom = PinCustom(annotation: self.shapeAnnotation, reuseIdentifier: "Pincustom")
         
         return pin
+    }
+    //para agregar cualquier
+    func mapView(_ mapView: MKMapView, rendererFor overlay: MKOverlay) -> MKOverlayRenderer {
+        if overlay is MKPolygon {
+            let renderer = MKPolygonRenderer(polygon: overlay as! MKPolygon)
+            renderer.fillColor = UIColor.black.withAlphaComponent(0.5)
+            renderer.strokeColor = UIColor.orange
+            renderer.lineWidth = 2
+            return renderer
+        }
+        return MKOverlayRenderer()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
